@@ -114,6 +114,8 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int select = jCBProductos.getSelectedIndex();
+        double precio = Integer.parseInt(jTPrecio.getText());
+        String nombre = jTNombre.getText();
         Producto producto;
         switch (select) {
             case 0:
@@ -190,6 +192,6 @@ public class Ventana extends javax.swing.JFrame {
         jTable1.setModel(modelo);
     }
     private void cargarDatos(Producto producto){
-       // modelo.addRow(Object[]{producto.getTipo(),producto.getDescripcion(),producto.getPrecio()});
+       modelo.addRow(new Object[]{producto.getTipo(),producto.getDescripcion(),producto.getPrecio()});
     }
 }
