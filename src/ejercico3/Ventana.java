@@ -35,11 +35,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Ventana extends javax.swing.JFrame {
 
+    private DefaultTableModel modelo = new DefaultTableModel();
+
     /**
      * Creates new form Ventana
      */
     public Ventana() {
         initComponents();
+        crearCebecera();
     }
 
     /**
@@ -123,7 +126,9 @@ public class Ventana extends javax.swing.JFrame {
                 producto = new Alimento(Double.parseDouble(jTPrecio.getText()), jTNombre.getText());
                 break;
         }
-        DefaultTableModel modelo = new DefaultTableModel();
+      
+        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCBProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBProductosActionPerformed
@@ -176,4 +181,15 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JTextField jTPrecio;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void crearCebecera() {
+        modelo.addColumn("Producto");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Precio");
+        
+        jTable1.setModel(modelo);
+    }
+    private void cargarDatos(Producto producto){
+       // modelo.addRow(Object[]{producto.getTipo(),producto.getDescripcion(),producto.getPrecio()});
+    }
 }

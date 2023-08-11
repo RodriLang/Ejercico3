@@ -5,10 +5,20 @@ package ejercico3;
 public abstract class Producto {
     protected double precio;
     protected String descripcion;
+    protected String tipo;
 
-    public Producto(double precio, String descripcion) {
+    public Producto(double precio, String descripcion, String tipo) {
+        this.tipo = tipo;
         this.precio = precio;
         this.descripcion = descripcion;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
 
