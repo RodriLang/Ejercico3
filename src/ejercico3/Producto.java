@@ -8,16 +8,8 @@ public abstract class Producto {
     protected String tipo;
 
     public Producto(double precio, String descripcion, String tipo) {
-        this.tipo = tipo;
         this.precio = precio;
         this.descripcion = descripcion;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
@@ -36,6 +28,14 @@ public abstract class Producto {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
     
 }
